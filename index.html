@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameAI — Твой путь в киберспорт</title>
+    <style>
+        :root {
+            --neon: #00ffa3;
+            --bg: #0b0b15;
+            --card: #161625;
+            --text: #ffffff;
+            --gray: #a0a0b0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .container { padding: 20px; max-width: 600px; margin: 0 auto; }
+
+        /* Шапка */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+        .logo { font-size: 20px; font-weight: 900; letter-spacing: 2px; }
+        .logo span { color: var(--neon); text-shadow: 0 0 10px var(--neon); }
+
+        /* Главный блок */
+        .hero { text-align: center; padding: 60px 0; }
+        h1 { font-size: 2.5rem; line-height: 1.1; margin-bottom: 20px; text-transform: uppercase; }
+        .hero p { color: var(--gray); margin-bottom: 30px; font-size: 1.1rem; }
+
+        /* Кнопка */
+        .btn {
+            background: var(--neon); color: #000; border: none; padding: 18px 40px;
+            font-size: 1rem; font-weight: bold; border-radius: 50px;
+            text-transform: uppercase; cursor: pointer; transition: 0.3s;
+            width: 100%; box-sizing: border-box;
+            box-shadow: 0 0 15px rgba(0, 255, 163, 0.3);
+        }
+        .btn:active { transform: scale(0.95); }
+
+        /* Секция: Как это работает */
+        .section-title { font-size: 1.5rem; margin: 40px 0 20px; color: var(--neon); text-align: center; text-transform: uppercase; }
+        .step { background: var(--card); padding: 20px; border-radius: 15px; margin-bottom: 15px; border: 1px solid #2d2d44; }
+        .step h4 { margin: 0 0 10px 0; color: var(--neon); font-size: 1.2rem; }
+        .step p { margin: 0; color: var(--gray); }
+
+        /* Секция: Тарифы */
+        .plan { border: 2px solid var(--neon); padding: 25px; border-radius: 20px; text-align: center; background: rgba(0, 255, 163, 0.05); margin-top: 20px; }
+        .price { font-size: 2.2rem; font-weight: bold; margin: 15px 0; color: var(--text); }
+        .price span { font-size: 1rem; color: var(--gray); }
+
+        /* Футер */
+        footer { text-align: center; padding: 50px 20px; color: var(--gray); font-size: 0.8rem; border-top: 1px solid #2d2d44; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo">GAME<span>AI</span></div>
+    </header>
+
+    <section class="hero">
+        <h1>Апай ранг <br>с помощью ИИ</h1>
+        <p>Персональный анализ каждой катки. Узнай свои ошибки до того, как их увидит тимейт.</p>
+        <button class="btn" onclick="order()">Начать обучение</button>
+    </section>
+
+    <h2 class="section-title">Как это работает?</h2>
+    <div class="step">
+        <h4>1. Синхронизация</h4>
+        <p>Подключи свой Steam или Riot аккаунт. Мы импортируем историю матчей.</p>
+    </div>
+    <div class="step">
+        <h4>2. Нейро-анализ</h4>
+        <p>ИИ сканирует твои тайминги, клики и позиционирование на карте.</p>
+    </div>
+    <div class="step">
+        <h4>3. Результат</h4>
+        <p>Получай короткие видео-советы, что исправить прямо сейчас.</p>
+    </div>
+
+    <h2 class="section-title">Тариф</h2>
+    <div class="plan">
+        <h3>PRO Игрок</h3>
+        <div class="price">490₽ <span>/мес</span></div>
+        <p>Безлимитный анализ каток + доступ к закрытому чату с профи.</p>
+        <button class="btn" style="padding: 12px;" onclick="order()">Выбрать план</button>
+    </div>
+
+    <footer>
+        <p>© 2026 GameAI Startup. Все права защищены.</p>
+        <p>Сделано на смартфоне для будущих чемпионов.</p>
+    </footer>
+</div>
+
+<script>
+    function order() {
+        let email = prompt("Введите ваш Email, чтобы получить ранний доступ к бета-тесту:");
+        if (email && email.includes('@')) {
+            alert("Круто! Мы записали ваш адрес: " + email + ". Ждите письмо с инструкциями!");
+        } else if (email) {
+            alert("Пожалуйста, введите корректный Email.");
+        }
+    }
+</script>
+
+</body>
+</html>
